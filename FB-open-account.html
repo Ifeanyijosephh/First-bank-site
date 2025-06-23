@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="description" content="First Bank Nigeria">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robot" content="index, follow">
+        <meta property="og::title" content="First Bank Nigeria">
+        <meta property="og::description" content="Open a first Bank account">
+        <meta name="theme-color" content="blue">
+        <link rel="icon" href="favicon.ico" type="image/first-bank-nigeria.svg">
+        <title> First Bank Nigeria Services </title>
+    </head>
+     <body>
+        <header>
+            <h1> First Bank Nigeria </h1>
+            <nav aria-label="Main navigation">
+                <a href="index.html"> Home </a>
+                <a href="FB-about.html"> About Us </a>
+                <a href="FB-services.html"> Services </a>
+                <a href="FB-open-account.html"> Open account</a>
+            </nav>
+        </header>
+        <main role="main">
+            <section>
+                <form action="process-account.php" method="post" enctype="multipart/form-data" autocomplete>
+                    <fieldset>
+                        <legend><h2>Open Account</h2></legend>
+                        <label for="name"> Full name:</label><br>
+                        <input type="text" id="name" name="name" minlength="3" required aria-label="Full name"><br><br>
+                        <label for="email"> Email: </label><br>
+                        <input type="email" id="email" name="email" required aria-label="Email"><br><br>
+                        <label for="tel"> Phone Number: </label><br>
+                        <input type="number" id="tel" name="id" inputmode="numeric" oninput="this.value = this.value.slice(0,11)" required aria-label="phone number"><br><br>
+                        <label for="bvn"> Enter BVN:</label><br>
+                        <input type="number" inputmode="numeric" id="bvn" name="bvn" required aria-label="BVN" oninput="this.value = this.value.slice(0,11)"><br><br>
+                        <label for="account-type">Select Account type:</label><br>
+                        <select id="account-type">
+                            <option value="" disabled selected> Select Account type</option>
+                            <option value="Savings"> Savings Account </option>
+                            <option value="Current"> Current Account</option>
+                            <option value="Corporate"> Corporate Account</option>
+                            <option value="Mefirst"> Me-first Account</option>
+
+                        </select><br><br>
+                        <label for="dob"> Enter your DOB:</label><br>
+                        <input type="date" id="dob" name="dob" required aria-label="Date of Birth"><br><br>
+                        <label for="photo-ID"> Upload your photo ID</label><br>
+                        <input type="file" id="photo-ID" name="photo-ID" accept=".jpg, .png" required aria-label="Upload Photo ID"><br><br>
+                        <input type="text" id="Year-ID" name="Year-ID" value="Application for 2025" readonly><br><br><br>
+                        <button type="submit"> Create Account </button>
+                        <input type="hidden" id="form-ID" name="form-ID" value="22TD7VF">
+                        <template>
+                            <p> Thank you for Choosing First Bank.</p>
+                        </template>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
